@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \YellowDigital\LaravelChatgptMockApi\LaravelChatgptMockApi
  */
-class LaravelChatgptMockApi extends Facade
+class ChatGPTMockApi extends Facade
 {
     protected static function getFacadeAccessor()
     {

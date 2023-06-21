@@ -59,7 +59,7 @@
                 "YellowDigital\\LaravelChatgptMockApi\\LaravelChatgptMockApiServiceProvider"
             ],
             "aliases": {
-                "LaravelChatgptMockApi": "YellowDigital\\LaravelChatgptMockApi\\Facades\\LaravelChatgptMockApi"
+                "ChatGPTMockApi": "YellowDigital\\LaravelChatgptMockApi\\Facades\\ChatGPTMockApi"
             }
         }
     },

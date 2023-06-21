@@ -8,11 +8,11 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('laravel_chatgpt_mock_api_table', function (Blueprint $table) {
+        Schema::create('chatgpt_mock_responses', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->text('prompt');
+            $table->string('hashsum');
+            $table->text('response');
             $table->timestamps();
         });
     }
