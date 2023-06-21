@@ -11,6 +11,11 @@ You'll need to then publish the config file and migrations:
 php artisan vendor:publish --provider="YellowDigital\LaravelChatgptMockApi\LaravelChatgptMockApiServiceProvider"
 ```
 
+Run migrate to create the cache table:
+```bash
+php artisan migrate
+```
+
 Finally you'll need to add your OpenAI API key to your `.env` file:
 ```
 OPENAI_API_KEY=sk-...
