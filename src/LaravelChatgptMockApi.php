@@ -73,7 +73,7 @@ class LaravelChatgptMockApi
         int $count,
         array $keys,
         string $model,
-        array $response
+        array|object $response
     ): void {
         $hashSum = md5($prompt . $count . implode('', $keys) . $model);
 
