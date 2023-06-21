@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace YellowDigital\LaravelChatgptMockApi\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelChatgptMockApiCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-chatgpt-mock-api';
 
     public $description = 'My command';
 
