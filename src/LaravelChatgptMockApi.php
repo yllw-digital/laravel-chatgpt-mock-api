@@ -14,8 +14,9 @@ class LaravelChatgptMockApi
         int $count = 1,
         array $keys,
         string $model = 'gpt-3.5-turbo',
+        bool $cache = true
     ): JsonResponse {
-        if($cachedResponse = $this->getCachedResponse($prompt, $count, $keys, $model)) {
+        if($cache && $cachedResponse = $this->getCachedResponse($prompt, $count, $keys, $model)) {
             return $cachedResponse;
         }
 
@@ -77,6 +78,8 @@ class LaravelChatgptMockApi
     ): void {
         $hashSum = md5($prompt . $count . implode('', $keys) . $model);
 
+        ChatGptMockResponse::where('hashsum', $hashSum)->delete();
+        
         ChatgptMockResponse::create([
             'hashsum' => $hashSum,
             'prompt' => $prompt,
